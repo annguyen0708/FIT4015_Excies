@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quên mật khẩu - Khôi phục mật khẩu tài khoản Tour Du Lịch">
+    <meta name="keywords" content="quên mật khẩu, khôi phục mật khẩu, tour du lịch">
+    <title>Quên Mật Khẩu - Tour Du Lịch</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('/anh/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
+        .forgot-password-container {
+            max-width: 400px;
+            margin: 100px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .form-control:focus {
+            box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+            border-color: #dc3545;
+        }
+        .btn-primary {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        .btn-primary:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+        .text-danger {
+            color: #dc3545 !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="trangchu.html">Tour Du Lịch</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="trangchu.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gioithieu.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tourdulich.html">Tour</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lienhe.html">Liên Hệ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dangnhap.html">Đăng Nhập</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="gioithieu.html">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tourdulich.html">Tour</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Dịch vụ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Form Quên Mật Khẩu -->
+    <div class="forgot-password-container">
+        <h2 class="text-center text-danger mb-4">Quên Mật Khẩu</h2>
+        <p class="text-center mb-4">Nhập email của bạn để nhận liên kết đặt lại mật khẩu.</p>
+        <form id="forgotPasswordForm" onsubmit="return handleSubmit(event)">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required 
+                       placeholder="Nhập email của bạn">
+                <div class="invalid-feedback">
+                    Vui lòng nhập email hợp lệ.
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mb-3">Gửi Yêu Cầu</button>
+            <div class="text-center">
+                <a href="dangnhap.html" class="text-danger text-decoration-none">
+                    <i class="bi bi-arrow-left"></i> Quay lại Đăng Nhập
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            // Thêm logic xử lý form ở đây
+            alert('Yêu cầu đặt lại mật khẩu đã được gửi đến email của bạn!');
+            window.location.href = 'dangnhap.html';
+            return false;
+        }
+    </script>
+</body>
+</html>

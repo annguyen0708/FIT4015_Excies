@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Đăng ký tài khoản Tour Du Lịch - Tạo tài khoản mới để đặt tour và quản lý thông tin cá nhân">
+    <meta name="keywords" content="đăng ký, tour du lịch, tài khoản, đặt tour">
+    <title>Đăng Ký - Tour Du Lịch</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/dangki.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="trangchu.html">Tour Du Lịch</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="trangchu.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gioithieu.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tourdulich.html">Tour</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lienhe.html">Liên Hệ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dangnhap.html">Đăng Nhập</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dangki.html">Đăng Ký</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="gioithieu.html">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tourdulich.html">Tour</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Dịch vụ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="register-container">
+        <h2 class="text-center mb-4">Đăng Ký Tài Khoản</h2>
+        <form id="registerForm" onsubmit="return handleRegister(event)">
+            <div class="mb-3">
+                <label for="name" class="form-label">Họ và Tên</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                    <input type="text" class="form-control" id="name" required placeholder="Nhập họ và tên của bạn">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input type="email" class="form-control" id="email" required placeholder="Nhập email của bạn">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Số điện thoại</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                    <input type="tel" class="form-control" id="phone" required placeholder="Nhập số điện thoại">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                    <input type="password" class="form-control" id="password" required placeholder="Nhập mật khẩu">
+                </div>
+                <div class="password-requirements">
+                    Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường và số
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="confirm-password" class="form-label">Xác nhận Mật khẩu</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                    <input type="password" class="form-control" id="confirm-password" required placeholder="Nhập lại mật khẩu">
+                </div>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="terms" required>
+                <label class="form-check-label" for="terms">
+                    Tôi đồng ý với <a href="#" class="text-decoration-none">Điều khoản sử dụng</a> và <a href="#" class="text-decoration-none">Chính sách bảo mật</a>
+                </label>
+            </div>
+            <button type="submit" class="btn btn-success w-100 mb-3">
+                <i class="bi bi-person-plus"></i> Đăng Ký
+            </button>
+        </form>
+
+        <div class="text-center">
+            <p class="mb-0">Đã có tài khoản? <a href="dangnhap.html" class="text-decoration-none">Đăng nhập</a></p>
+        </div>
+    </div>
+
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function handleRegister(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const terms = document.getElementById('terms').checked;
+
+            // Validate password match
+            if (password !== confirmPassword) {
+                alert('Mật khẩu xác nhận không khớp!');
+                return false;
+            }
+
+            // Validate password strength
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+            if (!passwordRegex.test(password)) {
+                alert('Mật khẩu không đủ mạnh!');
+                return false;
+            }
+
+            // Here you would typically send this data to your server
+            console.log('Registration attempt:', { name, email, phone, terms });
+            
+            // For demo purposes, show a success message
+            alert('Đăng ký thành công!');
+            return false;
+        }
+    </script>
+</body>
+</html>

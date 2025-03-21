@@ -1,0 +1,73 @@
+/* Banner phần đầu trang */
+.about-banner {
+    background: url('https://source.unsplash.com/1600x600/?travel,adventure') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Phần nội dung giới thiệu */
+.about-section {
+    padding: 4rem 0;
+}
+
+/* Danh sách tính năng */
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Mục trong danh sách */
+.feature-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+/* Dấu tích trước mỗi mục */
+.feature-list li:before {
+    content: "✓";
+    color: #198754;
+    position: absolute;
+    left: 0;
+}
+
+/* Phần đội ngũ */
+.team-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+/* Ảnh thành viên */
+.team-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ảnh carousel */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-banner {
+        height: 300px;
+    }
+    
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    .team-member {
+        margin-bottom: 2rem;
+    }
+} 

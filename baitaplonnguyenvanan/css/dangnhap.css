@@ -1,0 +1,59 @@
+/* Background trang */
+body {
+    background: url('https://source.unsplash.com/1600x900/?travel') no-repeat center center;
+    background-size: cover;
+}
+
+/* Container đăng nhập */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input focus */
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Đăng nhập mạng xã hội */
+.social-login {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Icon mạng xã hội */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Style icon */
+.social-icons a {
+    color: #6c757d;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+/* Hover icon */
+.social-icons a:hover {
+    color: #0d6efd;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .login-container {
+        margin: 50px auto;
+        padding: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+} 

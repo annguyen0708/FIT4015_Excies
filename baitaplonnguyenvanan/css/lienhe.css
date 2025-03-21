@@ -1,0 +1,55 @@
+/* Hero section */
+.hero-section {
+    background-color: #ffc107;
+    padding: 2rem 0;
+}
+
+/* Ảnh carousel */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Thông tin liên hệ */
+.contact-info {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form liên hệ */
+.contact-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Nút mạng xã hội */
+.social-btn {
+    transition: transform 0.3s;
+}
+
+/* Hiệu ứng hover cho nút */
+.social-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Input focus */
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+    border-color: #198754;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    .contact-info,
+    .contact-form {
+        margin-bottom: 2rem;
+    }
+} 

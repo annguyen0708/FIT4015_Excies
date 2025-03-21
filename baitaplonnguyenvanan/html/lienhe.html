@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Liên hệ với chúng tôi - Tour Du Lịch - Đặt tour du lịch chất lượng cao">
+    <meta name="keywords" content="liên hệ, tour du lịch, đặt tour, du lịch">
+    <title>Liên Hệ - Tour Du Lịch</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/lienhe.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="trangchu.html">Tour Du Lịch</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="trangchu.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gioithieu.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tourdulich.html">Tour</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="lienhe.html">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="text-center mb-4">Liên hệ với chúng tôi</h1>
+            <p class="text-center mb-4">Khám Phá Thế Giới Cùng Chúng Tôi</p>
+            <p class="text-center mb-4">Những chuyến du lịch hấp dẫn đang chờ đón bạn!</p>
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="../img.jpg" class="d-block w-100" alt="Tour du lịch">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="../img1.jpg" class="d-block w-100" alt="Tour du lịch">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img2.jpg" class="d-block w-100" alt="Tour du lịch">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev" title="Previous slide">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next" title="Next slide">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Form & Info -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h3 class="mb-4">Thông Tin Liên Hệ</h3>
+                    <p><strong>Địa chỉ:</strong> 123 Đường Du Lịch, Quận 1, TP.HCM</p>
+                    <p><strong>Email:</strong> contact@tourdulich.com</p>
+                    <p><strong>Điện thoại:</strong> 0901 234 567</p>
+                    <p><strong>Thời gian làm việc:</strong> 08:00 - 18:00 (T2 - CN)</p>
+                    <h4 class="mt-4">Theo dõi chúng tôi:</h4>
+                    <a href="https://www.facebook.com/vna.anz" class="btn btn-primary me-2 social-btn">
+                        <i class="bi bi-facebook"></i> Facebook
+                    </a>
+                    <a href="#" class="btn btn-info social-btn">
+                        <i class="bi bi-instagram"></i> Instagram
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-form">
+                    <h3 class="mb-4">Gửi Tin Nhắn</h3>
+                    <form id="contactForm" onsubmit="return handleSubmit(event)">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Họ và Tên</label>
+                            <input type="text" class="form-control" id="name" required 
+                                   placeholder="Nhập họ và tên của bạn">
+                            <div class="invalid-feedback">
+                                Vui lòng nhập họ và tên.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required 
+                                   placeholder="Nhập email của bạn">
+                            <div class="invalid-feedback">
+                                Vui lòng nhập email hợp lệ.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Tin Nhắn</label>
+                            <textarea class="form-control" id="message" rows="4" required 
+                                      placeholder="Nhập nội dung tin nhắn"></textarea>
+                            <div class="invalid-feedback">
+                                Vui lòng nhập nội dung tin nhắn.
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Gửi</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p class="mb-0">&copy; 2025 Tour Du Lịch. All rights reserved.</p>
+    </footer>
+
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Thêm logic xử lý form ở đây
+            alert('Cảm ơn bạn đã liên hệ với chúng tôi! Chúng tôi sẽ phản hồi sớm nhất có thể.');
+            event.target.reset();
+            return false;
+        }
+    </script>
+</body>
+</html>

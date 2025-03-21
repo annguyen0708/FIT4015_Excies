@@ -1,0 +1,106 @@
+/* Thiết lập style chung cho toàn bộ trang */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+/* Container chính cho nội dung thành công */
+.success-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+/* Icon thông báo thành công */
+.success-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #28a745;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    animation: scaleIn 0.5s ease;
+}
+
+/* Style cho icon trong thông báo thành công */
+.success-icon i {
+    font-size: 50px;
+    color: white;
+}
+
+/* Box chứa thông tin chi tiết đặt tour */
+.booking-details {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border: 1px solid #e9ecef;
+}
+
+/* Box hiển thị mã đặt tour */
+.booking-code {
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px 0;
+    font-family: monospace;
+    font-size: 1.2em;
+    color: #0d6efd;
+}
+
+/* Box chứa thông tin liên hệ */
+.contact-info {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+/* Style cho nút về trang chủ */
+.btn-home {
+    background-color: #0d6efd;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Hiệu ứng hover cho nút về trang chủ */
+.btn-home:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+    color: white;
+}
+
+/* Animation cho hiệu ứng fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation cho hiệu ứng scaleIn */
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+} 

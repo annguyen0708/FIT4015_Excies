@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Meta tags cho SEO và responsive -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tour Du Lịch - Khám phá những điểm đến tuyệt vời">
+    <meta name="keywords" content="tour du lịch, du lịch, khám phá, điểm đến">
+    <title>Tour Du Lịch - Trang Chủ</title>
+    <!-- Liên kết CSS -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/trangchu.css">
+    
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="trangchu.html">Tour Du Lịch</a>
+            <!-- Nút menu cho mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu điều hướng -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="trangchu.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gioithieu.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tourdulich.html">Tour</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lienhe.html">Liên Hệ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dangnhap.html">Đăng Nhập</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="gioithieu.html">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tourdulich.html">Tour</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Dịch vụ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Phần Hero với Carousel -->
+    <header class="hero-section">
+        <div class="container">
+            <!-- Tiêu đề chính -->
+            <h1 class="text-center mb-4">Khám Phá Thế Giới Cùng Chúng Tôi</h1>
+            <p class="text-center mb-4">Những chuyến du lịch hấp dẫn đang chờ đón bạn!</p>
+            <!-- Carousel hiển thị hình ảnh -->
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="../img.jpg" class="d-block w-100" alt="Tour du lịch">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="../img1.jpg" class="d-block w-100" alt="Tour du lịch">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img2.jpg" class="d-block w-100" alt="Tour du lịch">
+                    </div>
+                </div>
+                <!-- Nút điều hướng carousel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev" title="Previous slide">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next" title="Next slide">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Phần Tour Nổi Bật -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Tour Nổi Bật</h2>
+        <div class="row">
+            <!-- Card Tour Biển -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="../bien.jpg" class="card-img-top" alt="Du lịch biển">
+                    <div class="card-body">
+                        <h5 class="card-title">Du Lịch Biển</h5>
+                        <p class="card-text">Trải nghiệm những bãi biển tuyệt đẹp.</p>
+                        <a href="dulichbien.html" class="btn btn-primary">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Tour Núi -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="../nui.jpg" class="card-img-top" alt="Du lịch núi">
+                    <div class="card-body">
+                        <h5 class="card-title">Khám Phá Núi Rừng</h5>
+                        <p class="card-text">Chinh phục những đỉnh núi hùng vĩ.</p>
+                        <a href="dulichnui.html" class="btn btn-primary">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Tour Thành Phố -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="../tp.jpg" class="card-img-top" alt="Du lịch thành phố">
+                    <div class="card-body">
+                        <h5 class="card-title">Du Lịch Thành Phố</h5>
+                        <p class="card-text">Khám phá những thành phố nổi tiếng.</p>
+                        <a href="dulichthanhpho.html" class="btn btn-primary">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p class="mb-0">&copy; 2025 Tour Du Lịch. All rights reserved.</p>
+    </footer>
+
+    <!-- Script Bootstrap -->
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* Phần header của trang tour - Hiển thị thông tin tổng quan */
+.tour-header {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+/* Style cho hình ảnh tour - Thêm bo góc và đổ bóng */
+.tour-image {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+/* Box chứa các điểm nổi bật của tour */
+.tour-highlights {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+/* Phần lịch trình tour */
+.tour-schedule {
+    margin: 2rem 0;
+}
+
+/* Style cho từng ngày trong lịch trình */
+.schedule-day {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+}
+
+/* Box hiển thị giá tour */
+.price-tag {
+    background-color: #198754;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+/* Nút quay lại danh sách tour */
+.back-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #ffc107;
+    color: #212529;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 2rem 0;
+    transition: background-color 0.3s;
+}
+
+/* Hiệu ứng hover cho nút quay lại */
+.back-button:hover {
+    background-color: #ffca2c;
+    color: #212529;
+}
+
+/* Phần hero section của trang tour */
+.hero {
+    background-size: cover;
+    height: 600px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ==========================================
+   RESPONSIVE STYLES
+   ========================================== */
+
+/* Điều chỉnh style cho màn hình nhỏ */
+@media (max-width: 768px) {
+    /* Giảm chiều cao hero section */
+    .hero {
+        height: 400px;
+    }
+    
+    /* Điều chỉnh padding cho header */
+    .tour-header {
+        padding: 1.5rem 0;
+    }
+    
+    /* Điều chỉnh padding cho phần highlights */
+    .tour-highlights {
+        padding: 1.5rem;
+    }
+} 
